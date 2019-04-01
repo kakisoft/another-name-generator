@@ -5,23 +5,13 @@ import Router from 'vue-router';
 import AddonsPage from '../docs/categories/AddonsPage';
 
 // FREE
-import AlertPage from '../docs/AlertPage';
-import AccordionPage from '../docs/AccordionPage';
-import BadgePage from '../docs/BadgePage';
 import BlogComponentsPage from '../docs/BlogComponentsPage';
-import ButtonPage from '../docs/ButtonPage';
-import ButtonsGroupPage from '../docs/ButtonsGroupPage';
 import BreadcrumbPage from '../docs/BreadcrumbPage';
-import CardPage from '../docs/CardPage';
-import CarouselPage from '../docs/CarouselPage';
-import ChartPage from '../docs/ChartPage';
-import CollapsePage from '../docs/CollapsePage';
 import DataTablePage from '../docs/DataTablePage';
 import DropdownPage from '../docs/DropdownPage';
 import EdgeHeaderPage from '../docs/EdgeHeaderPage';
 import FooterPage from '../docs/FooterPage';
 import FormsPage from '../docs/FormsPage';
-import GoogleMapsPage from '../docs/GoogleMapsPage';
 import GridPage from '../docs/GridPage';
 import HamburgerMenuPage from '../docs/HamburgerMenuPage';
 import HomePage from '../docs/HomePage';
@@ -42,7 +32,6 @@ import NavbarPage from '../docs/NavbarPage';
 import NavigationPage from '../docs/NavigationPage';
 import PaginationPage from '../docs/PaginationPage';
 import PanelPage from '../docs/PanelPage';
-import PopoverPage from '../docs/PopoverPage';
 import ProgressBarsPage from '../docs/ProgressBarsPage';
 import SearchPage from '../docs/SearchPage';
 import SliderPage from '../docs/SliderPage';
@@ -53,11 +42,8 @@ import TablePaginationPage from '../docs/TablePaginationPage';
 import TableScrollPage from '../docs/TableScrollPage';
 import TableSearchPage from '../docs/TableSearchPage';
 import TableSortPage from '../docs/TableSortPage';
-import TooltipPage from '../docs/TooltipPage';
 import ValidationPage from '../docs/ValidationPage';
-import VideoCarouselPage from '../docs/VideoCarouselPage';
 import VideoPage from '../docs/VideoPage';
-import WavesPage from '../docs/WavesPage';
 
 Vue.use(Router);
 
@@ -79,29 +65,9 @@ export default new Router({
 
     // FREE
     {
-      path: '/advanced/accordion',
-      name: 'AccordionPage',
-      component: AccordionPage
-    }, {
-      path: '/components/badge',
-      name: 'BadgePage',
-      component: BadgePage
-    }, {
       path: '/components/grid',
       name: 'GridPage',
       component: GridPage
-    }, {
-      path: '/components/card',
-      name: 'CardPage',
-      component: CardPage
-    }, {
-      path: '/components/button',
-      name: 'ButtonPage',
-      component: ButtonPage
-    }, {
-      path: '/components/button-group',
-      name: 'ButtonsGroupPage',
-      component: ButtonsGroupPage
     }, {
       path: '/navigation/hamburger',
       name: 'HamburgerMenuPage',
@@ -123,10 +89,6 @@ export default new Router({
       name: 'TablePaginationPage',
       component: TablePaginationPage
     }, {
-      path: '/advanced/maps',
-      name: 'GoogleMapsPage',
-      component: GoogleMapsPage
-    }, {
       path: '/tables/table-search',
       name: 'TableSearchPage',
       component: TableSearchPage
@@ -146,10 +108,6 @@ export default new Router({
       path: '/components/jumbotron',
       name: 'JumbotronPage',
       component: JumbotronPage
-    }, {
-      path: '/advanced/carousel',
-      name: 'CarouselPage',
-      component: CarouselPage
     }, {
       path: '/navigation/breadcrumb',
       name: 'BreadcrumbPage',
@@ -187,14 +145,6 @@ export default new Router({
       name: 'NavigationPage',
       component: NavigationPage
     }, {
-      path: '/components/alert',
-      name: 'AlertPage',
-      component: AlertPage
-    }, {
-      path: '/advanced/collapse',
-      name: 'CollapsePage',
-      component: CollapsePage
-    }, {
       path: '/components/pagination',
       name: 'PaginationPage',
       component: PaginationPage
@@ -203,21 +153,9 @@ export default new Router({
       name: 'PanelPage',
       component: PanelPage
     }, {
-      path: '/advanced/chart',
-      name: 'ChartPage',
-      component: ChartPage
-    }, {
       path: '/components/progress-bars',
       name: 'ProgressBarsPage',
       component: ProgressBarsPage
-    }, {
-      path: '/advanced/tooltip',
-      name: 'TooltipPage',
-      component: TooltipPage
-    }, {
-      path: '/advanced/popover',
-      name: 'PopoverPage',
-      component: PopoverPage
     }, {
       path: '/components/edge-header',
       name: 'EdgeHeaderPage',
@@ -226,10 +164,6 @@ export default new Router({
       path: '/forms/validation',
       name: 'ValidationPage',
       component: ValidationPage
-    }, {
-      path: '/advanced/videocarousel',
-      name: 'VideoCarouselPage',
-      component: VideoCarouselPage
     }, {
       path: '/modals/modal',
       name: 'ModalPage',
@@ -282,10 +216,6 @@ export default new Router({
       path: '/plugins/blog-components',
       name: 'BlogComponentsPage',
       component: BlogComponentsPage
-    }, {
-      path: '/advanced/wave-effect',
-      name: 'WavesPage',
-      component: WavesPage
     }
 
   ]
