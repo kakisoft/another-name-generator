@@ -5,7 +5,7 @@
         <mdb-row>
           <mdb-col md="10" class="mx-auto float-none white z-depth-1 py-2 px-2">
             <mdb-card-body>
-              <h2 class="h2-responsive pb-4"><strong>MDB Vue Demo App</strong></h2>
+              <h2 class="h2-responsive pb-4"><strong>MDB Vue Demo Apppppppppppp</strong></h2>
               <p>Vue Bootstrap with Material Design</p>
               <p class="pb-4">This application shows the actual use of MDB Vue components in the application.</p>
               <mdb-row class="d-flex flex-row justify-content-center">
