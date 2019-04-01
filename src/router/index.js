@@ -6,15 +6,11 @@ import AddonsPage from '../docs/categories/AddonsPage';
 
 // FREE
 import BlogComponentsPage from '../docs/BlogComponentsPage';
-import DataTablePage from '../docs/DataTablePage';
 import DropdownPage from '../docs/DropdownPage';
 import EdgeHeaderPage from '../docs/EdgeHeaderPage';
-import FormsPage from '../docs/FormsPage';
 import GridPage from '../docs/GridPage';
 import HomePage from '../docs/HomePage';
 import IframePage from '../docs/IframePage';
-import InputsPage from '../docs/InputsPage';
-import InputGroupPage from '../docs/InputGroupPage';
 import JumbotronPage from '../docs/JumbotronPage';
 import LiveDemoPage from '../docs/LiveDemoPage';
 import ListGroupPage from '../docs/ListGroupPage';
@@ -27,16 +23,10 @@ import ModalStylesPage from '../docs/ModalStylesPage';
 import PaginationPage from '../docs/PaginationPage';
 import PanelPage from '../docs/PanelPage';
 import ProgressBarsPage from '../docs/ProgressBarsPage';
-import SearchPage from '../docs/SearchPage';
 import SliderPage from '../docs/SliderPage';
 import SpinnersPage from '../docs/SpinnersPage';
 import TabsPage from '../docs/TabsPage';
 import TablePage from '../docs/TablePage';
-import TablePaginationPage from '../docs/TablePaginationPage';
-import TableScrollPage from '../docs/TableScrollPage';
-import TableSearchPage from '../docs/TableSearchPage';
-import TableSortPage from '../docs/TableSortPage';
-import ValidationPage from '../docs/ValidationPage';
 import VideoPage from '../docs/VideoPage';
 
 Vue.use(Router);
@@ -67,29 +57,9 @@ export default new Router({
       name: 'TablePage',
       component: TablePage
     }, {
-      path: '/tables/datatable',
-      name: 'DataTablePage',
-      component: DataTablePage
-    }, {
       path: '/plugins/iframe',
       name: 'IframePage',
       component: IframePage
-    }, {
-      path: '/tables/table-pagination',
-      name: 'TablePaginationPage',
-      component: TablePaginationPage
-    }, {
-      path: '/tables/table-search',
-      name: 'TableSearchPage',
-      component: TableSearchPage
-    }, {
-      path: '/tables/table-sort',
-      name: 'TableSortPage',
-      component: TableSortPage
-    }, {
-      path: '/tables/table-scroll',
-      name: 'TableScrollPage',
-      component: TableScrollPage
     }, {
       path: '/components/dropdown',
       name: 'DropdownPage',
@@ -98,14 +68,6 @@ export default new Router({
       path: '/components/jumbotron',
       name: 'JumbotronPage',
       component: JumbotronPage
-    }, {
-      path: '/forms/inputs',
-      name: 'InputsPage',
-      component: InputsPage
-    }, {
-      path: '/forms/group',
-      name: 'InputGroupPage',
-      component: InputGroupPage
     }, {
       path: '/components/liveDemo',
       name: 'LiveDemoPage',
@@ -135,10 +97,6 @@ export default new Router({
       name: 'EdgeHeaderPage',
       component: EdgeHeaderPage
     }, {
-      path: '/forms/validation',
-      name: 'ValidationPage',
-      component: ValidationPage
-    }, {
       path: '/modals/modal',
       name: 'ModalPage',
       component: ModalPage
@@ -162,14 +120,6 @@ export default new Router({
       path: '/components/slider',
       name: 'SliderPage',
       component: SliderPage
-    }, {
-      path: '/forms/forms',
-      name: 'FormsPage',
-      component: FormsPage
-    }, {
-      path: '/forms/search',
-      name: 'SearchPage',
-      component: SearchPage
     }, {
       path: '/components/tabs',
       name: 'TabsPage',
