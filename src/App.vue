@@ -7,13 +7,6 @@
       <mdb-navbar-toggler>
         <mdb-navbar-nav right>
           <mdb-nav-item exact to="/" waves-fixed>Home</mdb-nav-item>
-          <mdb-nav-item to="/css" waves-fixed>CSS</mdb-nav-item>
-          <mdb-nav-item to="/components" waves-fixed>Components</mdb-nav-item>
-          <mdb-nav-item to="/advanced" waves-fixed>Advanced</mdb-nav-item>
-          <mdb-nav-item to="/navigation" waves-fixed>Navigation</mdb-nav-item>
-          <mdb-nav-item to="/forms" waves-fixed>Forms</mdb-nav-item>
-          <mdb-nav-item to="/tables" waves-fixed>Tables</mdb-nav-item>
-          <mdb-nav-item to="/modals" waves-fixed>Modals</mdb-nav-item>
           <mdb-nav-item to="/plugins" waves-fixed>Plugins & addons</mdb-nav-item>
         </mdb-navbar-nav>
       </mdb-navbar-toggler>

@@ -2,13 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // CATEGORIES
-import CSSPage from '../docs/categories/CSSPage';
-import ComponentsPage from '../docs/categories/ComponentsPage';
-import AdvancedPage from '../docs/categories/AdvancedPage';
-import NavigationMenuPage from '../docs/categories/NavigationMenuPage';
-import FormsMenuPage from '../docs/categories/FormsMenuPage';
-import TablesPage from '../docs/categories/TablesPage';
-import ModalsPage from '../docs/categories/ModalsPage';
 import AddonsPage from '../docs/categories/AddonsPage';
 
 // FREE
@@ -86,39 +79,6 @@ export default new Router({
     },
 
     // CATEGORIES
-    {
-      path: '/css',
-      name: 'CSSPage',
-      component: CSSPage
-    }, {
-      path: '/components',
-      name: 'ComponentsPage',
-      component: ComponentsPage
-    }, {
-      path: '/advanced',
-      name: 'AdvancedPage',
-      component: AdvancedPage
-    },
-    {
-      path: '/navigation',
-      name: 'NavigationMenuPage',
-      component: NavigationMenuPage
-    },
-    {
-      path: '/forms',
-      name: 'FormsMenuPage',
-      component: FormsMenuPage
-    },
-    {
-      path: '/tables',
-      name: 'TablesPage',
-      component: TablesPage
-    },
-    {
-      path: '/modals',
-      name: 'ModalsPage',
-      component: ModalsPage
-    },
     {
       path: '/plugins',
       name: 'AddonsPage',
