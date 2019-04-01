@@ -8,7 +8,6 @@ import AddonsPage from '../docs/categories/AddonsPage';
 import AlertPage from '../docs/AlertPage';
 import AccordionPage from '../docs/AccordionPage';
 import BadgePage from '../docs/BadgePage';
-import BackgroundImagePage from '../docs/BackgroundImagePage';
 import BlogComponentsPage from '../docs/BlogComponentsPage';
 import ButtonPage from '../docs/ButtonPage';
 import ButtonsGroupPage from '../docs/ButtonsGroupPage';
@@ -20,22 +19,18 @@ import CollapsePage from '../docs/CollapsePage';
 import DataTablePage from '../docs/DataTablePage';
 import DropdownPage from '../docs/DropdownPage';
 import EdgeHeaderPage from '../docs/EdgeHeaderPage';
-import FaPage from '../docs/FaPage';
 import FooterPage from '../docs/FooterPage';
 import FormsPage from '../docs/FormsPage';
-import GradientPage from '../docs/GradientPage';
 import GoogleMapsPage from '../docs/GoogleMapsPage';
 import GridPage from '../docs/GridPage';
 import HamburgerMenuPage from '../docs/HamburgerMenuPage';
 import HomePage from '../docs/HomePage';
-import HoverPage from '../docs/HoverPage';
 import IframePage from '../docs/IframePage';
 import InputsPage from '../docs/InputsPage';
 import InputGroupPage from '../docs/InputGroupPage';
 import JumbotronPage from '../docs/JumbotronPage';
 import LiveDemoPage from '../docs/LiveDemoPage';
 import ListGroupPage from '../docs/ListGroupPage';
-import MasksPage from '../docs/MasksPage';
 import MediaPage from '../docs/MediaPage';
 import ModalPage from '../docs/ModalPage';
 import ModalEventsPage from '../docs/ModalEventsPage';
@@ -50,13 +45,10 @@ import PanelPage from '../docs/PanelPage';
 import PopoverPage from '../docs/PopoverPage';
 import ProgressBarsPage from '../docs/ProgressBarsPage';
 import SearchPage from '../docs/SearchPage';
-import CustomColorsScrollbarPage from '../docs/CustomColorsScrollbarPage';
 import SliderPage from '../docs/SliderPage';
 import SpinnersPage from '../docs/SpinnersPage';
 import TabsPage from '../docs/TabsPage';
 import TablePage from '../docs/TablePage';
-import TableAdditionalPage from '../docs/TableAdditionalPage';
-import TableResponsivePage from '../docs/TableResponsivePage';
 import TablePaginationPage from '../docs/TablePaginationPage';
 import TableScrollPage from '../docs/TableScrollPage';
 import TableSearchPage from '../docs/TableSearchPage';
@@ -95,14 +87,6 @@ export default new Router({
       name: 'BadgePage',
       component: BadgePage
     }, {
-      path: '/css/background',
-      name: 'BackgroundImagePage',
-      component: BackgroundImagePage
-    }, {
-      path: '/css/gradient',
-      name: 'GradientPage',
-      component: GradientPage
-    }, {
       path: '/components/grid',
       name: 'GridPage',
       component: GridPage
@@ -127,10 +111,6 @@ export default new Router({
       name: 'TablePage',
       component: TablePage
     }, {
-      path: '/css/table-additional',
-      name: 'TableAdditionalPage',
-      component: TableAdditionalPage
-    }, {
       path: '/tables/datatable',
       name: 'DataTablePage',
       component: DataTablePage
@@ -146,10 +126,6 @@ export default new Router({
       path: '/advanced/maps',
       name: 'GoogleMapsPage',
       component: GoogleMapsPage
-    }, {
-      path: '/css/table-responsive',
-      name: 'TableResponsviePage',
-      component: TableResponsivePage
     }, {
       path: '/tables/table-search',
       name: 'TableSearchPage',
@@ -178,18 +154,6 @@ export default new Router({
       path: '/navigation/breadcrumb',
       name: 'BreadcrumbPage',
       component: BreadcrumbPage
-    }, {
-      path: '/css/hover',
-      name: 'HoverPagePage',
-      component: HoverPage
-    }, {
-      path: '/css/icons',
-      name: 'FaPage',
-      component: FaPage
-    }, {
-      path: '/css/scrollbar',
-      name: 'CustomColorsScrollbarPage',
-      component: CustomColorsScrollbarPage
     }, {
       path: '/forms/inputs',
       name: 'InputsPage',
@@ -258,10 +222,6 @@ export default new Router({
       path: '/components/edge-header',
       name: 'EdgeHeaderPage',
       component: EdgeHeaderPage
-    }, {
-      path: '/css/masks',
-      name: 'MasksPage',
-      component: MasksPage
     }, {
       path: '/forms/validation',
       name: 'ValidationPage',
