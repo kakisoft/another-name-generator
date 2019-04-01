@@ -6,14 +6,11 @@ import AddonsPage from '../docs/categories/AddonsPage';
 
 // FREE
 import BlogComponentsPage from '../docs/BlogComponentsPage';
-import BreadcrumbPage from '../docs/BreadcrumbPage';
 import DataTablePage from '../docs/DataTablePage';
 import DropdownPage from '../docs/DropdownPage';
 import EdgeHeaderPage from '../docs/EdgeHeaderPage';
-import FooterPage from '../docs/FooterPage';
 import FormsPage from '../docs/FormsPage';
 import GridPage from '../docs/GridPage';
-import HamburgerMenuPage from '../docs/HamburgerMenuPage';
 import HomePage from '../docs/HomePage';
 import IframePage from '../docs/IframePage';
 import InputsPage from '../docs/InputsPage';
@@ -27,9 +24,6 @@ import ModalEventsPage from '../docs/ModalEventsPage';
 import ModalExamplesPage from '../docs/ModalExamplesPage';
 import ModalFormsPage from '../docs/ModalFormsPage';
 import ModalStylesPage from '../docs/ModalStylesPage';
-import NavsPage from '../docs/NavsPage';
-import NavbarPage from '../docs/NavbarPage';
-import NavigationPage from '../docs/NavigationPage';
 import PaginationPage from '../docs/PaginationPage';
 import PanelPage from '../docs/PanelPage';
 import ProgressBarsPage from '../docs/ProgressBarsPage';
@@ -69,10 +63,6 @@ export default new Router({
       name: 'GridPage',
       component: GridPage
     }, {
-      path: '/navigation/hamburger',
-      name: 'HamburgerMenuPage',
-      component: HamburgerMenuPage
-    }, {
       path: '/css/table',
       name: 'TablePage',
       component: TablePage
@@ -109,10 +99,6 @@ export default new Router({
       name: 'JumbotronPage',
       component: JumbotronPage
     }, {
-      path: '/navigation/breadcrumb',
-      name: 'BreadcrumbPage',
-      component: BreadcrumbPage
-    }, {
       path: '/forms/inputs',
       name: 'InputsPage',
       component: InputsPage
@@ -132,18 +118,6 @@ export default new Router({
       path: '/components/listgroup',
       name: 'ListGroupPage',
       component: ListGroupPage
-    }, {
-      path: '/navigation/navbar',
-      name: 'NavbarPage',
-      component: NavbarPage
-    }, {
-      path: '/navigation/navs',
-      name: 'NavsPage',
-      component: NavsPage
-    }, {
-      path: '/navigation/navigation',
-      name: 'NavigationPage',
-      component: NavigationPage
     }, {
       path: '/components/pagination',
       name: 'PaginationPage',
@@ -196,10 +170,6 @@ export default new Router({
       path: '/forms/search',
       name: 'SearchPage',
       component: SearchPage
-    }, {
-      path: '/navigation/footer',
-      name: 'FooterPage',
-      component: FooterPage
     }, {
       path: '/components/tabs',
       name: 'TabsPage',
