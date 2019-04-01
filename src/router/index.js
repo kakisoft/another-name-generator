@@ -15,11 +15,6 @@ import JumbotronPage from '../docs/JumbotronPage';
 import LiveDemoPage from '../docs/LiveDemoPage';
 import ListGroupPage from '../docs/ListGroupPage';
 import MediaPage from '../docs/MediaPage';
-import ModalPage from '../docs/ModalPage';
-import ModalEventsPage from '../docs/ModalEventsPage';
-import ModalExamplesPage from '../docs/ModalExamplesPage';
-import ModalFormsPage from '../docs/ModalFormsPage';
-import ModalStylesPage from '../docs/ModalStylesPage';
 import PaginationPage from '../docs/PaginationPage';
 import PanelPage from '../docs/PanelPage';
 import ProgressBarsPage from '../docs/ProgressBarsPage';
@@ -96,26 +91,6 @@ export default new Router({
       path: '/components/edge-header',
       name: 'EdgeHeaderPage',
       component: EdgeHeaderPage
-    }, {
-      path: '/modals/modal',
-      name: 'ModalPage',
-      component: ModalPage
-    }, {
-      path: '/modals/events',
-      name: 'ModalEventsPage',
-      component: ModalEventsPage
-    }, {
-      path: '/modals/examples',
-      name: 'ModalExamplesPage',
-      component: ModalExamplesPage
-    }, {
-      path: '/modals/forms',
-      name: 'ModalFormsPage',
-      component: ModalFormsPage
-    }, {
-      path: '/modals/styles',
-      name: 'ModalStylesPage',
-      component: ModalStylesPage
     }, {
       path: '/components/slider',
       name: 'SliderPage',
