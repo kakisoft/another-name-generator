@@ -11,30 +11,38 @@
         </div>
         <hr class="my-5">
 
-
+    <button @click="handleSubmit" type="button" >
+      <span >&times;</span>
+    </button>
       </mdb-container>
     </div>
 </template>
 
 <script>
-// import { mdbContainer, mdbCol, mdbRow, mdbIcon, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbBtn, mdbEdgeHeader, mdbCardBody } from 'mdbvue';
+import { mdbContainer, mdbCol, mdbRow, mdbIcon, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbBtn, mdbEdgeHeader, mdbCardBody } from 'mdbvue';
 
-// export default {
-//   name: 'HomePage',
-//   components: {
-//     mdbContainer,
-//     mdbCol,
-//     mdbRow,
-//     mdbIcon,
-//     mdbNavbar,
-//     mdbNavItem,
-//     mdbNavbarNav,
-//     mdbNavbarToggler,
-//     mdbBtn,
-//     mdbEdgeHeader,
-//     mdbCardBody
-//   }
-// };
+export default {
+  name: 'HomePage',
+  components: {
+    mdbContainer,
+    mdbCol,
+    mdbRow,
+    mdbIcon,
+    mdbNavbar,
+    mdbNavItem,
+    mdbNavbarNav,
+    mdbNavbarToggler,
+    mdbBtn,
+    mdbEdgeHeader,
+    mdbCardBody
+  },
+  methods: {
+    handleSubmit(e) {
+      console.log('Form submitted');
+    }
+  }
+};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
