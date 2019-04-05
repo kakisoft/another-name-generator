@@ -1,83 +1,566 @@
 <template>
-    <div>
-      <mdb-container>
-        <div>
-          <h2 class="text-center mt-5 font-weight-bold">Why is it so great?</h2>
-          <mdb-col md="10" class="mx-auto text-center">
-            <p class="pt-4">Google has designed a Material Design to make the web more beautiful and more user-friendly.</p>
-            <p>Twitter has created a Bootstrap to support you in faster and easier development of responsive and effective websites.</p>
-            <p>We present you a framework containing the best features of both of them - Material Design for Bootstrap.</p>
-          </mdb-col>
-        </div>
-        <hr class="my-5">
 
-    <button @click="handleSubmit" type="button" >
-      <span >&times;</span>
-    </button>
-      </mdb-container>
+  <mdb-container>
+    <hr class="my-2">
+    <div class="text-center mt-3">
+      <mdb-btn @click="setGeneratedPhrase" color="primary" size="lg">Primary button</mdb-btn>
     </div>
+    <hr class="my-2">
+
+
+
+    <mdb-row class="mt-5 align-items-center justify-content-start">
+      <h4 class="demo-title"><strong>Panels</strong></h4>
+      <a href="https://mdbootstrap.com/docs/vue/components/panels/?utm_source=DemoApp&utm_medium=MDBVueFree" waves-fixed class="border grey-text px-2 border-light rounded ml-2" target="_blank"><mdb-icon icon="graduation-cap" class="mr-2"/>Docs</a>
+    </mdb-row>
+    <hr class="mb-5" />
+    <mdb-row>
+      <mdb-col col="4">
+        <mdb-card class="card-body" style="width: 22rem; margin-top: 1rem;">
+          <mdb-card-title>Panel Title</mdb-card-title>
+          <mdb-card-text>Some quick example text to build on the panel title and make up the bulk of the panel's content.</mdb-card-text>
+          <div class="flex-row">
+            <a>Card link</a>
+            <a style="margin-left: 1.25rem">Another link</a>
+          </div>
+        </mdb-card>
+      </mdb-col>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card>
+        <mdb-card-body>
+          This is some text within a panel body.
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 18rem;">
+        <mdb-card-body>
+          <mdb-card-title>Panel title</mdb-card-title>
+          <mdb-card-title tag="h6" sub class="mb-2 text-muted">Panel title</mdb-card-title>
+          <mdb-card-text>Some quick example text to build on the panel title and make up the bulk of the panel's content. </mdb-card-text>
+          <a href="#" class="card-link">Panel link</a>
+          <a href="#" class="card-link">Another link</a>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 18rem;">
+        <mdb-list-group>
+          <mdb-list-group-item>Cras justo odio</mdb-list-group-item>
+          <mdb-list-group-item>Dapibus ac facilisis in</mdb-list-group-item>
+          <mdb-list-group-item>Vestibulum at eros</mdb-list-group-item>
+        </mdb-list-group>
+      </mdb-card>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 22rem;">
+        <mdb-card-header color="deep-orange lighten-1">Featured</mdb-card-header>
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="deep-orange">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 22rem;">
+        <mdb-card-header color="primary-color" tag="h3">Featured</mdb-card-header>
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 22rem;" class="text-center">
+        <mdb-card-header color="success-color">Featured</mdb-card-header>
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="success" size="sm">go somewhere</mdb-btn>
+        </mdb-card-body>
+        <mdb-card-footer color="success-color">2 days ago</mdb-card-footer>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="my-4">
+      <mdb-col sm="6">
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title>Special title treatment</mdb-card-title>
+            <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-btn color="primary">go somewhere</mdb-btn>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-col>
+
+      <mdb-col sm="6">
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title>Special title treatment</mdb-card-title>
+            <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-btn color="primary">go somewhere</mdb-btn>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-col>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card class="w-75 mb-4">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+
+      <mdb-card class="w-50">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 20rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card style="width: 18rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card class="text-center" style="width: 18rem; margin-top: 1rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card class="text-right" style="width: 18rem; margin-top: 1rem;">
+        <mdb-card-body>
+          <mdb-card-title>Special title treatment</mdb-card-title>
+          <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          <mdb-btn color="primary">go somewhere</mdb-btn>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="mt-4">
+      <mdb-card class="text-center">
+        <mdb-card-header>
+          <mdb-tab default class="card-header-tabs">
+            <mdb-tab-item :active="active==0" @click.native.prevent="active=0">Active</mdb-tab-item>
+            <mdb-tab-item :active="active==1" @click.native.prevent="active=1">Link</mdb-tab-item>
+            <mdb-tab-item disabled>Disabled</mdb-tab-item>
+          </mdb-tab>
+        </mdb-card-header>
+        <mdb-card-body>
+          <mdb-tab-content>
+            <mdb-tab-pane class="fade" key="show1" v-if="active==0">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+            <mdb-tab-pane class="fade" key="show2" v-if="active==1">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+            <mdb-tab-pane class="fade" key="show3" v-if="active==2">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+          </mdb-tab-content>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+    
+    <mdb-row class="mt-4">
+      <mdb-card class="text-center">
+        <mdb-card-header>
+          <mdb-tab class="nav-pills card-header-pills">
+            <mdb-tab-item :active="active2==0" @click.native.prevent="active2=0">Active</mdb-tab-item>
+            <mdb-tab-item :active="active2==1" @click.native.prevent="active2=1">Link</mdb-tab-item>
+            <mdb-tab-item disabled>Disabled</mdb-tab-item>
+          </mdb-tab>
+        </mdb-card-header>
+        <mdb-card-body>
+          <mdb-tab-content>
+            <mdb-tab-pane class="fade" key="show1" v-if="active2==0">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+            <mdb-tab-pane class="fade" key="show2" v-if="active2==1">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+            <mdb-tab-pane class="fade" key="show3" v-if="active2==2">
+              <mdb-card-title>Special title treatment</mdb-card-title>
+              <mdb-card-text>With supporting text below as a natural lead-in to additional content.</mdb-card-text>
+              <mdb-btn color="primary">go somewhere</mdb-btn>
+            </mdb-tab-pane>
+          </mdb-tab-content>
+        </mdb-card-body>
+      </mdb-card>
+    </mdb-row>
+
+    <mdb-row class="my-4">
+      <mdb-col md="6">
+
+        <mdb-card color="indigo" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+        <br/>
+
+        <mdb-card color="pink lighten-2" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+        <br/>
+
+        <mdb-card color="info-color" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+      </mdb-col>
+      <mdb-col md="6">
+
+        <mdb-card color="red lighten-1" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+        <br/>
+
+        <mdb-card color="success-color" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+        <br/>
+
+        <mdb-card color="mdb-color lighten-2" class="text-center">
+          <mdb-card-body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </mdb-card-body>
+        </mdb-card>
+
+      </mdb-col>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-col>
+        <mdb-card border="primary" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-primary">
+            <mdb-card-title tag="h5">Primary card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="secondary" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-secondary">
+            <mdb-card-title tag="h5">Secondary card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="success" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-success">
+            <mdb-card-title tag="h5">Success card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="danger" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-danger">
+            <mdb-card-title tag="h5">Danger card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="warning" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-warning">
+            <mdb-card-title tag="h5">Warning card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="info" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-info">
+            <mdb-card-title tag="h5">Info card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="light" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Light card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card border="dark" class="mb-3" style="max-width: 18rem;">
+          <mdb-card-header>Header</mdb-card-header>
+          <mdb-card-body class="text-dark">
+            <mdb-card-title tag="h5">Dark card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+        <mdb-card border="success" style="max-width: 18rem;">
+          <mdb-card-header transparent border="success">Header</mdb-card-header>
+          <mdb-card-body class="text-success">
+            <mdb-card-title tag="h5">Success card title</mdb-card-title>
+            <mdb-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer transparent border="success">Footer</mdb-card-footer>
+        </mdb-card>
+      </mdb-col>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card-group>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This content is
+              a little bit longer.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This panel has even
+              longer content than the first to show that equal height action.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-card-group>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card-group>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This content is
+              a little bit longer.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This panel has even
+              longer content than the first to show that equal height action.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+      </mdb-card-group>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card-group deck>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This content is
+              a little bit longer.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This panel has even
+              longer content than the first to show that equal height action.</mdb-card-text>
+          </mdb-card-body>
+          <mdb-card-footer small muted>Last updated 3 mins ago</mdb-card-footer>
+        </mdb-card>
+      </mdb-card-group>
+    </mdb-row>
+    <mdb-row class="mt-4">
+      <mdb-card-group column>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title that wraps to a new line</mdb-card-title>
+            <mdb-card-text>This is a longer panel with supporting text below as a natural lead-in to additional content. This content is
+              a little bit longer.</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+        <mdb-card class="p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <mdb-footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in
+                <cite title="Source Title">Source Title</cite>
+              </small>
+            </mdb-footer>
+          </blockquote>
+        </mdb-card>
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card color="primary-color" text="white" class="text-center p-3">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+            <mdb-footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in
+                <cite title="Source Title">Source Title</cite>
+              </small>
+            </mdb-footer>
+          </blockquote>
+        </mdb-card>
+
+        <mdb-card class="text-center">
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This panel has supporting text below as a natural lead-in to additional content.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+        <mdb-card class="text-right p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <mdb-footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in
+                <cite title="Source Title">Source Title</cite>
+              </small>
+            </mdb-footer>
+          </blockquote>
+        </mdb-card>
+
+        <mdb-card>
+          <mdb-card-body>
+            <mdb-card-title tag="h5">Panel title</mdb-card-title>
+            <mdb-card-text>This is a wider panel with supporting text below as a natural lead-in to additional content. This panel has even
+              longer content than the first to show that equal height action.</mdb-card-text>
+            <mdb-card-text small muted>Last updated 3 mins ago</mdb-card-text>
+          </mdb-card-body>
+        </mdb-card>
+
+      </mdb-card-group>
+    </mdb-row>
+
+    <mdb-jumbotron class="mt-4">
+      <h1 class="h1-responsive">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-2" />
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.
+      </p>
+      <mdb-btn color="primary" size="lg">Learn more</mdb-btn>
+    </mdb-jumbotron>
+  </mdb-container>
 </template>
 
 <script>
-import { mdbContainer, mdbCol, mdbRow, mdbIcon, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbBtn, mdbEdgeHeader, mdbCardBody } from 'mdbvue';
+import { mdbContainer,  mdbRow, mdbCol, mdbBtn, mdbCard, mdbCardTitle, mdbCardText, mdbCardFooter, mdbCardBody, mdbCardHeader, mdbListGroup, mdbListGroupItem, mdbNavItem, mdbCardGroup, mdbJumbotron, mdbIcon, mdbFooter, mdbTab, mdbTabItem, mdbTabContent, mdbTabPane } from 'mdbvue';
 
 export default {
-  name: 'HomePage',
+  name: 'PanelPage',
   components: {
     mdbContainer,
-    mdbCol,
     mdbRow,
-    mdbIcon,
-    mdbNavbar,
-    mdbNavItem,
-    mdbNavbarNav,
-    mdbNavbarToggler,
+    mdbCol,
     mdbBtn,
-    mdbEdgeHeader,
-    mdbCardBody
+    mdbCard,
+    mdbCardTitle,
+    mdbCardText,
+    mdbCardFooter,
+    mdbCardBody,
+    mdbCardHeader,
+    mdbListGroup,
+    mdbListGroupItem,
+    mdbNavItem,
+    mdbCardGroup,
+    mdbJumbotron,
+    mdbIcon,
+    mdbFooter,
+    mdbTab,
+    mdbTabItem,
+    mdbTabContent,
+    mdbTabPane
   },
+  // data(){
+  //   return {
+  //     active: 0,
+  //     active2: 0
+  //   };
+  // },
   methods: {
-    handleSubmit(e) {
-      console.log('Form submitted');
+    setGeneratedPhrase(e) {
+      console.log('setGeneratedPhrase');
     }
-  }
+  }  
 };
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-.home-feature-box {
-  padding: 40px 0;
-}
-
-.home-feature-box i {
-  font-size: 6rem;
-}
-
-.home-feature-box span {
-  display: block;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  padding-top: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-}
-
-a {
-  color: #42b983;
-}
 
 </style>
