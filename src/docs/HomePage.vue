@@ -10,12 +10,12 @@
 
 
 
-    <div v-for="(todo, index) in todos">
+    <div v-for="(phrase, index) in phrases">
       <mdb-row class="my-4">
         <mdb-col sm="6">
           <mdb-card>
             <mdb-card-body>
-              This is some text within a panel body.
+              {{phrase}}
             </mdb-card-body>
           </mdb-card>
         </mdb-col>
@@ -86,19 +86,18 @@ export default {
 
   data(){
     return {
-      active: 0,
-      active2: 0,
-      name: 'kaki',
-      todos: [
-        'app02-1',
-        'app02-2',
-        'app02-3'
+      phrases:[
+        '何か',
+        'いい感じの',
+        '言葉'
       ]
     };
   },
   methods: {
     setGeneratedPhrase(e) {
       console.log('setGeneratedPhrase');
+
+      this.phrases.push('ああ');
     }
   }  
 };
