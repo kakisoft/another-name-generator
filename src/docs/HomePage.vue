@@ -3,7 +3,7 @@
   <mdb-container>
     <hr class="my-2">
     <div class="text-center mt-3">
-      <mdb-btn @click="setGeneratedPhrase" color="primary" size="lg">Primary button</mdb-btn>
+      <mdb-btn @click="setGeneratedPhrases" color="primary" size="lg">Primary button</mdb-btn>
     </div>
     <hr class="my-2">
 
@@ -81,6 +81,9 @@ export default {
   },
   data(){
     return {
+      TOKEN_LENGTH,
+      DELIMITER_CHAR,
+      hkn,
       phrases:[
         '何か',
         'いい感じの',
@@ -88,11 +91,34 @@ export default {
       ]
     };
   },
+  created() {
+    this.TOKEN_LENGTH   = 0;
+    this.DELIMITER_CHAR = ' ';
+
+    var Haikunator = require('haikunator')
+    this.hkn = new Haikunator({
+        defaults: {
+            tokenLength: this.TOKEN_LENGTH,
+            delimiter  : this.DELIMITER_CHAR
+        }
+    })
+  },
+  mounted() {
+  },
   methods: {
-    setGeneratedPhrase(e) {
-      console.log('setGeneratedPhrase');
+    setGeneratedPhrases(e) {
       this.phrases = [];
       this.phrases.push('ああ');
+
+
+var c1 = this.getGeneratedPhrase();
+// var b1 = this.hkn.haikunate();
+console.log(c1)
+
+
+    },
+    getGeneratedPhrase(){
+      return this.hkn.haikunate();
     }
   }  
 };
