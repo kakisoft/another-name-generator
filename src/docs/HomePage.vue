@@ -79,11 +79,6 @@ export default {
     mdbTabContent,
     mdbTabPane
   },
-
-    data: {
-      name: 'kaki'
-    },
-
   data(){
     return {
       phrases:[
@@ -96,7 +91,7 @@ export default {
   methods: {
     setGeneratedPhrase(e) {
       console.log('setGeneratedPhrase');
-
+      this.phrases = [];
       this.phrases.push('ああ');
     }
   }  
