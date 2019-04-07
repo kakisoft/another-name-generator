@@ -8,8 +8,6 @@
     <hr class="my-2">
 
 
-
-
     <div v-for="(phrase, index) in phrases">
       <mdb-row class="my-4">
         <mdb-col sm="6">
@@ -21,9 +19,6 @@
         </mdb-col>
       </mdb-row>
     </div>
-
-
-
 
 
 
@@ -81,9 +76,9 @@ export default {
   },
   data(){
     return {
-      TOKEN_LENGTH,
-      DELIMITER_CHAR,
-      hkn,
+      TOKEN_LENGTH   : 0,
+      DELIMITER_CHAR : ' ',
+      hkn : null,
       phrases:[
         '何か',
         'いい感じの',
@@ -92,10 +87,7 @@ export default {
     };
   },
   created() {
-    this.TOKEN_LENGTH   = 0;
-    this.DELIMITER_CHAR = ' ';
-
-    var Haikunator = require('haikunator')
+    const Haikunator = require('haikunator')
     this.hkn = new Haikunator({
         defaults: {
             tokenLength: this.TOKEN_LENGTH,
@@ -107,13 +99,14 @@ export default {
   },
   methods: {
     setGeneratedPhrases(e) {
-      this.phrases = [];
-      this.phrases.push('ああ');
+      // this.phrases = [];
+      // this.phrases.push('ああ');
 
 
 var c1 = this.getGeneratedPhrase();
 // var b1 = this.hkn.haikunate();
 console.log(c1)
+      this.phrases.push(c1);
 
 
     },
