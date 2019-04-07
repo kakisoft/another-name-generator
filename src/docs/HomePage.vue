@@ -7,38 +7,37 @@
     </div>
     <hr class="my-2">
 
+<div v-if="phrases.length">
 
-    <div v-for="(phrase, index) in phrases">
+    <div v-for="(i) in [0,2,4,6]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
       <mdb-row class="my-4">
         <mdb-col sm="6">
           <mdb-card>
             <mdb-card-body>
-              {{phrase}}
+              {{phrases[i]}}
+            </mdb-card-body>
+          </mdb-card>
+        </mdb-col>
+
+        <mdb-col sm="6">
+          <mdb-card>
+            <mdb-card-body>
+              {{phrases[i+1]}}
             </mdb-card-body>
           </mdb-card>
         </mdb-col>
       </mdb-row>
     </div>
 
+</div>
 
 
-    <mdb-row class="my-4">
-      <mdb-col sm="6">
-        <mdb-card>
-          <mdb-card-body>
-            This is some text within a panel body.
-          </mdb-card-body>
-        </mdb-card>
-      </mdb-col>
 
-      <mdb-col sm="6">
-        <mdb-card>
-          <mdb-card-body>
-            This is some text within a panel body.
-          </mdb-card-body>
-        </mdb-card>
-      </mdb-col>
-    </mdb-row>
+
+
+
+
+
 
     
 
@@ -78,12 +77,14 @@ export default {
     return {
       TOKEN_LENGTH   : 0,
       DELIMITER_CHAR : ' ',
+      getCount : 8,
       hkn : null,
-      phrases:[
-        '何か',
-        'いい感じの',
-        '言葉'
-      ]
+      phrases:[]
+      // phrases:[
+      //   '何か',
+      //   'いい感じの',
+      //   '言葉'
+      // ]
     };
   },
   created() {
@@ -99,16 +100,11 @@ export default {
   },
   methods: {
     setGeneratedPhrases(e) {
-      // this.phrases = [];
-      // this.phrases.push('ああ');
-
-
-var c1 = this.getGeneratedPhrase();
-// var b1 = this.hkn.haikunate();
-console.log(c1)
-      this.phrases.push(c1);
-
-
+      this.phrases = [];
+      for(let i=1; i<=this.getCount; i++){
+        const c1 = this.getGeneratedPhrase();
+        this.phrases.push(c1);
+      }
     },
     getGeneratedPhrase(){
       return this.hkn.haikunate();
