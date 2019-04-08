@@ -80,11 +80,6 @@ export default {
       getCount : 8,
       hkn : null,
       phrases:[]
-      // phrases:[
-      //   '何か',
-      //   'いい感じの',
-      //   '言葉'
-      // ]
     };
   },
   created() {
