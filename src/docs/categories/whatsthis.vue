@@ -6,42 +6,34 @@
           <mdb-col md="10" class="mx-auto float-none white z-depth-1 py-2 px-2">
             <mdb-card-body>
               <p>異名ってありますよね！</p>
-              <p class="pb-4">This application shows the actual use of MDB Vue components in the application.</p>
+              <p>
+                「死の天使」とか<br>
+                「砂漠の狐」とか<br>
+                「音速の貴公子」とか、そういうの。
+              </p>
+              <p>
+                いいのが思いつかない時に、ランダムに言葉組み合わせて、えいやって生成しちゃうサービスです。
+              </p>
+              <p>
+                出てくる言葉は、今のところ英語オンリーです。<br>
+                そのうち日本語訳が出てくる機能を追加するかもしれません。
+              </p>
             </mdb-card-body>
           </mdb-col>
         </mdb-row>
       </div>
-      <mdb-container>
-        <div>
-          <h2 class="text-center mt-5 font-weight-bold">Why is it so great?</h2>
-          <mdb-col md="10" class="mx-auto text-center">
-            <p class="pt-4">Google has designed a Material Design to make the web more beautiful and more user-friendly.</p>
-            <p>Twitter has created a Bootstrap to support you in faster and easier development of responsive and effective websites.</p>
-            <p>We present you a framework containing the best features of both of them - Material Design for Bootstrap.</p>
-          </mdb-col>
-        </div>
-        <hr class="my-5">
-
-
-      </mdb-container>
     </div>
 </template>
 
 <script>
-import { mdbContainer, mdbCol, mdbRow, mdbIcon, mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbBtn, mdbEdgeHeader, mdbCardBody } from 'mdbvue';
+import { mdbCol, mdbRow, mdbIcon, mdbEdgeHeader, mdbCardBody } from 'mdbvue';
 
 export default {
   name: 'HomePage',
   components: {
-    mdbContainer,
     mdbCol,
     mdbRow,
     mdbIcon,
-    mdbNavbar,
-    mdbNavItem,
-    mdbNavbarNav,
-    mdbNavbarToggler,
-    mdbBtn,
     mdbEdgeHeader,
     mdbCardBody
   }
