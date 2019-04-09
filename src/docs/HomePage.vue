@@ -3,7 +3,7 @@
   <mdb-container>
     <hr class="my-2">
     <div class="text-center mt-3">
-      <mdb-btn @click="setGeneratedPhrases" color="primary" size="lg">Primary button</mdb-btn>
+      <mdb-btn @click="setGeneratedPhrases" color="primary" size="lg" class="show-button">何か出ろ</mdb-btn>
     </div>
     <hr class="my-2">
 
@@ -110,5 +110,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .show-button {
+    padding : 1em 5em;
+  }
 
 </style>

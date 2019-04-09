@@ -2,12 +2,13 @@
   <div id="app" class="flyout">
     <mdb-navbar dark position="top" class="default-color" scrolling :scrollingOffset="20">
       <mdb-navbar-brand to="/" waves style="font-weight: bolder;">
-        MDB Vue
+        異名ジェネレータ
       </mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav right>
-          <mdb-nav-item exact to="/" waves-fixed>Home</mdb-nav-item>
+          <mdb-nav-item exact to="/" waves-fixed>使ってみる</mdb-nav-item>
           <mdb-nav-item to="/plugins" waves-fixed>Plugins & addons</mdb-nav-item>
+          <mdb-nav-item to="/whatsthis" waves-fixed>何これ？</mdb-nav-item>          
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>
@@ -16,7 +17,7 @@
     </main>
     <mdb-footer color="default-color">
       <p class="footer-copyright mb-0 py-3 text-center">
-        &copy; {{new Date().getFullYear()}} Copyright: <a href="https://mdbootstrap.com/docs/vue/?utm_source=DemoApp&utm_medium=MDBVue"> MDBootstrap.com</a>
+        {{new Date().getFullYear()}} kakisoft
       </p>
     </mdb-footer>
   </div>
