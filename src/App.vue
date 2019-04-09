@@ -6,9 +6,8 @@
       </mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav right>
-          <mdb-nav-item exact to="/" waves-fixed>使ってみる</mdb-nav-item>
-          <mdb-nav-item to="/plugins" waves-fixed>Plugins & addons</mdb-nav-item>
-          <mdb-nav-item to="/whatsthis" waves-fixed>何これ？</mdb-nav-item>          
+          <mdb-nav-item exact to="/" waves-fixed>【使ってみる】</mdb-nav-item>
+          <mdb-nav-item to="/whatsthis" waves-fixed>【何これ？】</mdb-nav-item>          
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>

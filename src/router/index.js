@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // CATEGORIES
-import AddonsPage from '../docs/categories/AddonsPage';
 import whatsthis from '../docs/categories/whatsthis';
 
 // FREE
@@ -23,11 +22,6 @@ export default new Router({
     },
 
     // CATEGORIES
-    {
-      path: '/plugins',
-      name: 'AddonsPage',
-      component: AddonsPage
-    },
     {
       path: '/whatsthis',
       name: 'whatsthis',

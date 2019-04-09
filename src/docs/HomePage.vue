@@ -7,40 +7,27 @@
     </div>
     <hr class="my-2">
 
-<div v-if="phrases.length">
+    <div v-if="phrases.length">
+        <div v-for="(i) in [0,2,4,6]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
+          <mdb-row class="my-4">
+            <mdb-col sm="6">
+              <mdb-card>
+                <mdb-card-body>
+                  {{phrases[i]}}
+                </mdb-card-body>
+              </mdb-card>
+            </mdb-col>
 
-    <div v-for="(i) in [0,2,4,6]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
-      <mdb-row class="my-4">
-        <mdb-col sm="6">
-          <mdb-card>
-            <mdb-card-body>
-              {{phrases[i]}}
-            </mdb-card-body>
-          </mdb-card>
-        </mdb-col>
-
-        <mdb-col sm="6">
-          <mdb-card>
-            <mdb-card-body>
-              {{phrases[i+1]}}
-            </mdb-card-body>
-          </mdb-card>
-        </mdb-col>
-      </mdb-row>
+            <mdb-col sm="6">
+              <mdb-card>
+                <mdb-card-body>
+                  {{phrases[i+1]}}
+                </mdb-card-body>
+              </mdb-card>
+            </mdb-col>
+          </mdb-row>
+        </div>
     </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-    
-
 
   </mdb-container>
 </template>
@@ -112,6 +99,6 @@ export default {
 <style scoped>
   .show-button {
     padding : 1em 5em;
-  }
+}
 
 </style>
