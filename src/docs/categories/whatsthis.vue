@@ -20,7 +20,7 @@
               </p>
               <p>
                 作ったの、こんな奴。→
-                <a class="blue-text mr-1" href="https://google.co.jp"><mdb-icon fab icon="twitter" size="2x" /></a>
+                <a class="blue-text mr-1" href="https://twitter.com/kakisoft_tab"><mdb-icon fab icon="twitter" size="2x" /></a>
               </p>
             </mdb-card-body>
           </mdb-col>
