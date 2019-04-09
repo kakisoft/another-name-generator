@@ -5,10 +5,7 @@ import Router from 'vue-router';
 import whatsthis from '../docs/categories/whatsthis';
 
 // FREE
-import BlogComponentsPage from '../docs/BlogComponentsPage';
 import HomePage from '../docs/HomePage';
-import IframePage from '../docs/IframePage';
-import VideoPage from '../docs/VideoPage';
 
 Vue.use(Router);
 
@@ -29,19 +26,6 @@ export default new Router({
     },
 
     // FREE
-    {
-      path: '/plugins/iframe',
-      name: 'IframePage',
-      component: IframePage
-    }, {
-      path: '/plugins/video',
-      name: 'VideoPage',
-      component: VideoPage
-    }, {
-      path: '/plugins/blog-components',
-      name: 'BlogComponentsPage',
-      component: BlogComponentsPage
-    }
-
+    
   ]
 });

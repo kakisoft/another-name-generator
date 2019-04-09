@@ -18,6 +18,10 @@
                 出てくる言葉は、今のところ英語オンリーです。<br>
                 そのうち日本語訳が出てくる機能を追加するかもしれません。
               </p>
+              <p>
+                作ったの、こんな奴。→
+                <a class="blue-text mr-1" href="https://google.co.jp"><mdb-icon fab icon="twitter" size="2x" /></a>
+              </p>
             </mdb-card-body>
           </mdb-col>
         </mdb-row>
