@@ -1,24 +1,15 @@
 # another-name-generator
-another-name-generator
+https://another-name-generator.netlify.com/whatsthis
 
 
-## base
-https://github.com/mdbootstrap/Vue-Bootstrap-with-Material-Design
+# Discription
+異名ってありますよね！  
 
+「死の天使」とか  
+「砂漠の狐」とか  
+「音速の貴公子」とか、そういうの。  
 
-# Quick start
-``` 
-bash
+いいのが思いつかない時に、ランダムに言葉組み合わせて、えいやって生成しちゃうサービスです。  
 
-# install dependencies
-npm install / yarn
-
-# serve with hot reload at localhost:8080
-npm run dev /
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+出てくる言葉は、今のところ英語オンリーです。  
+そのうち日本語訳が出てくる機能を追加するかもしれません。  
