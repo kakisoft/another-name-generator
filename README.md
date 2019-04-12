@@ -1,5 +1,5 @@
 # another-name-generator
-https://another-name-generator.netlify.com/whatsthis
+https://another-name-generator.netlify.com/
 
 
 # Discription
