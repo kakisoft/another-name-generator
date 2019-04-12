@@ -13,3 +13,6 @@ https://another-name-generator.netlify.com/
 
 出てくる言葉は、今のところ英語オンリーです。  
 そのうち日本語訳が出てくる機能を追加するかもしれません。  
+
+
+Vue.js と Netlify を使ってみたくて作りました。
