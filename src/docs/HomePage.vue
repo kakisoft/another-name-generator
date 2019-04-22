@@ -101,6 +101,7 @@ export default {
     // }
 
     // ver2  結局、Haikunator をコールする必要なくなっちゃったよ！
+    // 「おい！翻訳APIどこで使ってんだよ！？」というご質問についての言い訳については後日・・・
     getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
     },
