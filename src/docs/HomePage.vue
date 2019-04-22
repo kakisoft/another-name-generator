@@ -3,25 +3,27 @@
   <mdb-container>
     <hr class="my-2">
     <div class="text-center mt-3">
-      <mdb-btn @click="setGeneratedPhrases" color="primary" size="lg" class="show-button">何か出ろ</mdb-btn>
+      <mdb-btn @click="setGeneratedPhrases" color="green" size="lg" class="show-button">何か出ろ</mdb-btn>
     </div>
     <hr class="my-2">
 
-    <div v-if="phrases.length">
-        <div v-for="(i) in [0,2,4,6]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
+    <div v-if="selectedPhaseList.length">
+        <div v-for="(i) in [0,2,4]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
           <mdb-row class="my-4">
             <mdb-col sm="6">
               <mdb-card>
+                <mdb-card-header color="primary-color" tag="h6">{{selectedPhaseList[i]['name_jp']}}</mdb-card-header>
                 <mdb-card-body>
-                  {{phrases[i]}}
+                  {{selectedPhaseList[i]["name_en"]}}
                 </mdb-card-body>
               </mdb-card>
             </mdb-col>
 
             <mdb-col sm="6">
               <mdb-card>
+                <mdb-card-header color="primary-color" tag="h6">{{selectedPhaseList[i+1]['name_jp']}}</mdb-card-header>
                 <mdb-card-body>
-                  {{phrases[i+1]}}
+                  {{selectedPhaseList[i+1]["name_en"]}}
                 </mdb-card-body>
               </mdb-card>
             </mdb-col>
@@ -34,6 +36,7 @@
 
 <script>
 import { mdbContainer,  mdbRow, mdbCol, mdbBtn, mdbCard, mdbCardTitle, mdbCardText, mdbCardFooter, mdbCardBody, mdbCardHeader, mdbListGroup, mdbListGroupItem, mdbNavItem, mdbCardGroup, mdbJumbotron, mdbIcon, mdbFooter, mdbTab, mdbTabItem, mdbTabContent, mdbTabPane } from 'mdbvue';
+import mockPhrases from '@/assets/mockdata/phrases.json';
 
 export default {
   name: 'PanelPage',
@@ -64,9 +67,13 @@ export default {
     return {
       TOKEN_LENGTH   : 0,
       DELIMITER_CHAR : ' ',
-      getCount : 8,
+      getCount : 6,
       hkn : null,
-      phrases:[]
+      phrases:[],
+      indexList:[],
+      selectedPhaseList:[],
+      numOfPhrases: mockPhrases.length,
+      PHRASE_LIST: mockPhrases
     };
   },
   created() {
@@ -81,17 +88,42 @@ export default {
   mounted() {
   },
   methods: {
+    //// ver1
+    // setGeneratedPhrases(e) {
+    //   this.phrases = [];
+    //   for(let i=1; i<=this.getCount; i++){
+    //     const c1 = this.getGeneratedPhrase();
+    //     this.phrases.push(c1);
+    //   }
+    // },
+    // getGeneratedPhrase(){
+    //   return this.hkn.haikunate();
+    // }
+
+    // ver2  結局、Haikunator をコールする必要なくなっちゃったよ！
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    },
+    
     setGeneratedPhrases(e) {
       this.phrases = [];
-      for(let i=1; i<=this.getCount; i++){
-        const c1 = this.getGeneratedPhrase();
-        this.phrases.push(c1);
+      this.setIndexList();
+      this.setSelectedPhaseList();
+    },
+    setIndexList(){
+      this.indexList = [];
+      for(var i=0; i<this.getCount; i++ ){
+          this.indexList.push(this.getRandomInt(this.numOfPhrases))
       }
     },
-    getGeneratedPhrase(){
-      return this.hkn.haikunate();
+    setSelectedPhaseList(){
+      this.selectedPhaseList = [];
+      this.indexList.forEach(el => {
+          this.selectedPhaseList.push(this.PHRASE_LIST[el]);
+      });
     }
-  }  
+
+  }   
 };
 </script>
 
