@@ -8,7 +8,7 @@
     <hr class="my-2">
 
     <div v-if="selectedPhaseList.length">
-        <div v-for="(i) in [0,2,4]"><!-- 何かもう吐きそうなぐらいみっともないコード。リファクタしたいけど、いい案が思いつかん。 -->
+        <div v-for="(i) in [0,2,4]"><!-- 何かもう吐きそうなぐらいみっともないコード。後でリファクタする-->
           <mdb-row class="my-4">
             <mdb-col sm="6">
               <mdb-card>
